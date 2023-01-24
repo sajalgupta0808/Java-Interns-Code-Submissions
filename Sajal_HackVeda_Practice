@@ -1,0 +1,99 @@
+//Hello World Problem
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+    }
+}
+/*
+Variables
+int i =0(integer number) 
+float= 13.543 ( decimal number)
+double = 12.34664357 ( decimal number with more typable numbers after decimal)
+boolean = True/False 
+char='c' (Character)
+String ='Sajal Gupta' (group of characters) 
+*/
+
+//Abstract Class
+package Abstract;
+
+abstract class AbstractClass {
+	public void Method(){
+		System.out.println("Hello World");
+    }
+	abstract public void NewMethod();
+}
+// Extends abstract class
+package Abstract;
+public class Demo extends AbstractClass {
+	public void   NewMethod() {
+		System.out.println("New Method");
+	}
+    public static void main(String[] args) {
+
+		AbstractClass obj=new Demo();
+		obj.NewMethod();
+		obj.Method();
+    }
+}
+//String Problems
+public class StringProblems {
+    public static void main(String[] args) 
+    {   
+        
+        char a='IIITian';
+        String b="Sajal Gupta";
+        String c="HackVeda Intern";
+        System.out.println(b.length());
+
+        System.out.println(c.charAt(0));
+        System.out.println(c.compareTo(b));
+        System.out.println(b.strip());
+        //convert in to upper case
+        System.out.println(c.toUpperCase());
+        //convert in to lower case
+        System.out.println(c.toLowerCase());
+        System.out.println(c.substring(1,3));
+        //return substring from position 1to position 3-1
+        System.out.println(c.substring(3));
+    }
+}
+//Array Problems
+public class ArrayProblems {
+    public static void main(String[] args) 
+	{
+        int Maths = 71;
+        int Chemistry = 65;
+        int Biology = 80;
+        int English = 78;
+        
+        int[] marks = new int [4];
+        marks[0] = 71;
+        marks[1] = 65;
+        marks[2] = 80;
+        marks[3] = 78;
+        System.out.println(marks[2]);
+        System.out.println(marks[3]);
+        System.out.println(marks[0]);
+    }
+}
+//Nested While Loop Problems
+public class NestedWhileLoop {
+
+	public static void main(String[] args) 
+	{
+		int i=1, j=1;
+		while (i<= 10)
+		{
+			while (j<= 5)
+			{
+				System.out.print("*");
+				j++;
+			}
+			i++;
+			System.out.println("");
+			j=1;
+		}
+	}
+}
