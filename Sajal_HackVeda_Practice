@@ -97,3 +97,88 @@ public class NestedWhileLoop {
 		}
 	}
 }
+//Inheritance
+class A{
+    int x=1;
+    public void setX(int a){
+        x=a;
+    }
+}
+class B extends A{
+    public int getB(){
+        setX(2);
+        return x;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+        System.out.println(a.x);
+        System.out.println(b.getB());
+    }
+}
+//Polymorphism-1
+class A{
+    int x=1;
+    public void setX(char c, int num){
+       System.out.println("i'm the first definition of method"+c+num);
+    }
+    public void setX(int num,char c){
+        System.out.println("i'm the second definition of method"+num+c);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        A a = new A();
+        a.setX('h',1);
+        a.setX(1,'h');
+
+
+    }
+}
+//Polymorphism-2
+class A{
+    int x=1;
+    public void setX(int a){
+        System.out.println("class A"+a);
+    }
+}
+
+class B extends A{
+    public void setX(int a){
+        super.setX(a);
+        System.out.println("class B"+a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        B b = new B();
+        b.setX(10);
+    }
+}
+//Interface
+interface printable{
+    void print();
+}
+interface showable{
+    void show();
+}
+class A7 implements printable,showable{
+    public void print(){
+        System.out.println("Hello");
+    }
+    public void show() {
+        System.out.println("Welcome");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A7 obj = new A7();
+        obj.print();
+        obj.show();
+    }
+}
