@@ -182,3 +182,32 @@ public class Main {
         obj.show();
     }
 }
+//Encapsulation and Access Specifiers-1
+class Encap{
+    private  int x = 08;
+    int y=21;
+}
+
+public class Main extends Encap {
+    public static void main(String[] args) {
+        Main obj = new Main();
+        System.out.println(obj.y);
+    }
+}
+//Encapsulation and Access Specifiers-2
+class Encap1{
+    private int a=2;
+    public int b=12;
+    protected int c=22;
+    int d=32;
+}
+
+public class Main extends Encap1{
+    public static void main(String[] args){
+     Main obj1=new Main();
+        System.out.println(obj1.a);
+        System.out.println(obj1.b);
+        System.out.println(obj1.c);
+        System.out.println(obj1.d);
+    }
+}
