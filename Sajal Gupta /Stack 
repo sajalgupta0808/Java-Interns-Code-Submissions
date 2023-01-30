@@ -1,0 +1,58 @@
+import java.util.Stack;
+public class MyStack{
+    public static void main (String[]args){
+        Stack stack = new Stack<Integer>();
+		System.out.println("Is Stack Empty" + stack.empty());
+
+		stack.push(10);
+		stack.push(20);
+
+		System.out.println("Get the top element" + stack.peek());
+		
+		System.out.println("Does it contains 20" + stack.search(20));
+		
+		stack.pop();
+		
+		System.out.println("Top element after pop: " + stack.peek());
+	}
+}
+
+//ArrayDeque
+import java.util.ArrayDeque;
+
+public class StackUsingDeque {
+
+	public static void main(String[] args) {
+		ArrayDeque<String> deque = new ArrayDeque<>();
+		deque.add("Sajal");
+		
+		deque.addFirst("Divyam");
+		
+		deque.addLast("Bhomik");
+		
+		deque.offerLast("Ritik");
+		
+		deque.offer("Rishab");
+		
+		System.out.println("First Element" + deque.getFirst());
+		System.out.println("Last Element" + deque.getLast());
+		System.out.println("Contains Akshank" + deque.contains("Akshank"));
+		
+		
+		System.out.println("Iterating in descending order");
+		
+		Iterator<String> iterator = new deque.descendingIterator();
+		
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+	}
+
+}
+
+
+
+
+
+
