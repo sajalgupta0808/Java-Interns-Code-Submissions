@@ -1,0 +1,54 @@
+//Comparator
+import java.util.Comparator;
+
+public class MyComparator implements Comparator<Integer> {
+
+	public int compare(Integer a1, Integer a2) {
+//		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		
+		if(a1 >= a2) {
+			return a1;
+		}else {
+			return a2;
+		}
+    }
+}
+
+//Priority Queue
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
+public class MyPriorityQueue {
+
+	public static void main(String[] args) {
+        PriorityQueue pq = new PriorityQueue();
+		
+		System.out.println("Is PQ empty" + pq.isEmpty());
+		
+		Mycomparator myComp = new MyComparator();
+		
+		PriorityQueue pq1 = new PriorityQueue(myComp);
+		
+		pq.add(10);
+		pq1.add(10);
+		
+		pq.add(5);
+		pq1.add(5);
+		
+		pq.add(100);
+		pq1.add(100);
+		
+		Iterator pqIter = pq.iterator();
+		Iterator pq1Iter = pq1.iterator();
+		
+		while(pq1Iter.hasNext()) {
+			System.our.println(pqIter.next());
+		}
+		
+		while(pq1Iter.hasNext()) {
+			System.our.println(pq1Iter.next());
+		}
+
+	}
+
+}
