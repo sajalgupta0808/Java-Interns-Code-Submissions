@@ -27,26 +27,26 @@ public class MyPriorityQueue {
 		
 		Mycomparator myComp = new MyComparator();
 		
-		PriorityQueue pq1 = new PriorityQueue(myComp);
+		PriorityQueue pq_1 = new PriorityQueue(myComp);
 		
-		pq.add(10);
-		pq1.add(10);
+		pq.add(2);
+		pq_1.add(2);
 		
-		pq.add(5);
-		pq1.add(5);
+		pq.add(12);
+		pq_1.add(12);
 		
-		pq.add(100);
-		pq1.add(100);
+		pq.add(120);
+		pq_1.add(120);
 		
 		Iterator pqIter = pq.iterator();
-		Iterator pq1Iter = pq1.iterator();
+		Iterator pq_1Iter = pq1.iterator();
 		
 		while(pq1Iter.hasNext()) {
 			System.our.println(pqIter.next());
 		}
 		
 		while(pq1Iter.hasNext()) {
-			System.our.println(pq1Iter.next());
+			System.our.println(pq_1Iter.next());
 		}
 
 	}
