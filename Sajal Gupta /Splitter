@@ -1,0 +1,66 @@
+import java.util.Spliterator;
+import java.util.ArrayList;
+
+
+public class MySpliteratorTest {
+
+	public static void main(String[] args) {
+	
+		
+		ArrayList<>() fbPosts = new ArrayList<>();
+		
+		fbPost.add("Post 1");
+		fbPost.add("Post 2");
+		fbPost.add("Post 3");
+		fbPost.add("Post 4");
+		fbPost.add("Post 5");
+		
+		Spliterator<String> spIter = fbPost.spliterator();
+		Spliterator<String> sp1Iter = fbPost.trySplit();
+		
+		System.out.println("SP estimated date size" + spIter.estimateSize());
+		System.out.println("SP exact date size" + spIter.getExactSizeIfKnown());
+		
+		spIter.forEachRemaing(System.out::println);
+		
+		System.out.println("SP estimated date size" + spIter.estimateSize());
+		System.out.println("SP exact date size" + spIter.getExactSizeIfKnown());
+	
+		
+		System.out.println("SP 1 estimated date size" + sp1Iter.estimateSize());
+		System.out.println("SP 1 exact date size" + sp1Iter.getExactSizeIfKnown());
+		
+		sp1Iter.forEachRemaing(System.out::println);
+		
+		System.out.println("SP estimated date size" + spIter.estimateSize());
+		System.out.println("SP exact date size" + spIter.getExactSizeIfKnown());
+
+	}
+
+}
+
+
+
+//Using toArray
+
+import java.util.ArrayList;
+
+public class toArrayListTest {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> list = new ArrayList<>();
+		
+		list.add("Sajal");
+		list.add("Gupta");
+		list.add("Bhomik");
+		list.add("Rishab");
+		
+		Object[] obj = list.toArray();
+		
+		System.out.println("Element at index 0" + obj[0]);
+		System.out.println("HashCode of the Array" + obj.hashCode());
+		
+	}
+
+}
