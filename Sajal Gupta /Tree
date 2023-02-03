@@ -10,12 +10,12 @@ public class BinaryTree {
 	
 	static class Node{
 		
-		int value;
+		int a;
 		
 		Node left, right; 
 		
-		Node(int value){
-			this.value = value;
+		Node(int a){
+			this.a = a;
 			
 			left = null;
 			right =  null;
