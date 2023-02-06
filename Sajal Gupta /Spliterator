@@ -39,8 +39,6 @@ public class MySpliteratorTest {
 
 }
 
-
-
 //Using toArray
 
 import java.util.ArrayList;
