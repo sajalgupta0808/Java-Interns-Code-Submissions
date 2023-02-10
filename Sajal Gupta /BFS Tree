@@ -1,7 +1,3 @@
-package MyTree;
-
-import MyTree.BinaryTreeTest.Tree.Node;
-
 public class BinaryTreeTest {
 
 	public static void main(String[] args) {
