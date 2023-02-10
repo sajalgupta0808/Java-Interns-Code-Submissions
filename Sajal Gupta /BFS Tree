@@ -1,0 +1,130 @@
+package MyTree;
+
+import MyTree.BinaryTreeTest.Tree.Node;
+
+public class BinaryTreeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tree tree = new Tree();
+		
+		Node root = new Tree.Node(5);
+		
+		tree.inster(root, 2);
+		tree.inster(root, 4);
+		tree.inster(root, 6);
+		tree.inster(root, 7);
+		tree.inster(root, 9);
+		tree.inster(root, 1);
+		
+		System.out.println("Traverse the tree");
+		tree.inorder(root);
+		
+		System.out.println("PreOrder");
+		tree.preOrder(root);
+		
+		System.out.println("PostOrder");
+		tree.postOrder(root);
+
+	}
+	
+	public static class Tree{
+		
+		class Node{
+			int value;
+			Node left, right;
+			
+			Node(int value){
+				this.value = value;
+				left = null;
+				right = null;
+				
+				
+			}
+		}
+		
+		public void insert(Node nod, int value) {
+			
+			if(value <= node.value) {
+				if(node.left != null) {
+					insert(node.left, value);
+				}else {
+					System.out.println("insert" + value + "to the left of" + node.value);
+					node.left = new Node(value);
+				}
+			} else if(value <= node.value) {
+				if(node.left != null) {
+					insert(node.left, value);
+				}else {
+					
+					node.right = new Node(value);
+					System.out.println("inserted" + value + "to the right of" + node.value);
+				}
+		}
+	}
+		
+		public void inorder(Node node) {
+			
+			if(node != null) {
+				inorder(node.left);
+				System.out.println(" " + node.value);
+				inorder(node.right);
+			}
+		}
+		
+		public void preOrder(Node node) {
+			if(node != null) {
+				System.out.println(" " + node.value);
+				preOrder(node.left);
+				preOrder(node.right);
+			}
+		}
+		
+		public void postOrder(Node node) {
+			if(node != null) {
+				
+				postOrder(node.left);
+				postOrder(node.right);
+				System.out.println(" " + node.value);
+			}
+				
+			}
+		
+		public int height(Node node) {
+			
+			if(node == null) {
+				return 0;
+			}
+			
+			int lheight = height(node.left);
+			int rheight = height(node.right);
+			
+			if(lheight > rheight) {
+				return (lheight+1);
+			}else {
+				return (rheight+1);
+			}
+			
+		}
+		
+		public void currentLevel(Node root, int level) {
+			if(root == null) {
+				return;
+			}
+			
+			if(level == 1) {
+				System.out.println(root.value + " ");
+			}else if(level > 1) {
+				currentLevel(root.left, level - 1);
+				currentLevel(root.right, level - 1);
+			}
+		}
+		
+		public void bfs(Node node) {
+			int h = height(node);
+			for(int i = 0; i <= h; i++) {
+				currentLevel(root, i);
+			}
+		}
+	}
+}
